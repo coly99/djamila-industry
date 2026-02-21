@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJAMILA Industry | Agriculture Durable en Casamance</title>
+    <meta name="description" content="DJAMILA Industry - L'agriculture durable au service de votre santé. Produits frais de Casamance, Sénégal.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-dark: #1a472a;
+            --primary-light: #4ade80;
+            --accent: #22c55e;
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-800: #1f2937;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Header & Navigation */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #0f2918 100%);
+            color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-lg);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-light);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 72px;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, #0f2918 100%);
+            color: var(--white);
+            padding: 6rem 2rem 8rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(74, 222, 128, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(74, 222, 128, 0.4);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(74, 222, 128, 0.6);
+            background: var(--white);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-light);
+            margin: 0.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 3rem;
+            margin: 2rem auto;
+            box-shadow: var(--shadow-md);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #e5e7eb 0%, #d1d5db 100%);
+            border-radius: var(--radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--primary-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-content h2 {
+            color: var(--primary-dark);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-content p {
+            color: #4b5563;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Features Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--primary-light);
+        }
+
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.75rem;
+            color: var(--white);
+        }
+
+        .feature-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            font-size: 0.95rem;
+        }
+
+        /* Shop Section */
+        .shop-section {
+            background: var(--gray-100);
+            border-radius: var(--radius);
+            padding: 4rem 2rem;
+            margin: 4rem auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .product-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-category {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.25rem;
+            color: var(--gray-800);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .product-origin {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .product-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+        }
+
+        .product-price span {
+            font-size: 0.875rem;
+            color: #6b7280;
+            font-weight: 400;
+        }
+
+        .add-to-cart {
+            background: var(--primary-dark);
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            font-size: 1rem;
+        }
+
+        .add-to-cart:hover {
+            background: var(--accent);
+            transform: scale(1.1);
+        }
+
+        /* Cart Floating Button */
+        .cart-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-dark);
+            color: var(--white);
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-xl);
+            z-index: 999;
+            transition: all 0.3s;
+            border: 3px solid var(--white);
+        }
+
+        .cart-float:hover {
+            transform: scale(1.1) rotate(5deg);
+            background: var(--accent);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background: #ef4444;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 2px solid var(--white);
+        }
+
+        /* Cart Modal */
+        .cart-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1001;
+            justify-content: flex-end;
+            backdrop-filter: blur(4px);
+        }
+
+        .cart-modal.active {
+            display: flex;
+        }
+
+        .cart-content {
+            background: var(--white);
+            width: 100%;
+            max-width: 450px;
+            height: 100%;
+            padding: 2rem;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-modal.active .cart-content {
+            transform: translateX(0);
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--gray-100);
+        }
+
+        .cart-header h2 {
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #6b7280;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .close-cart:hover {
+            background: var(--gray-100);
+            color: var(--gray-800);
+        }
+
+        .cart-items {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            align-items: center;
+            animation: slideIn 0.3s ease;
+        }
+
+        .cart-item-image {
+            width: 60px;
+            height: 60px;
+            background: var(--white);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+
+        .cart-item-details {
+            flex-grow: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            color: var(--gray-800);
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-price {
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .qty-btn {
+            width: 28px;
+            height: 28px;
+            border: 1px solid #d1d5db;
+            background: var(--white);
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-weight: 600;
+        }
+
+        .qty-btn:hover {
+            background: var(--primary-dark);
+            color: var(--white);
+            border-color: var(--primary-dark);
+        }
+
+        .cart-item-qty {
+            font-weight: 600;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .remove-item {
+            color: #ef4444;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            transition: transform 0.2s;
+        }
+
+        .remove-item:hover {
+            transform: scale(1.2);
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #6b7280;
+        }
+
+        .cart-empty i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #d1d5db;
+        }
+
+        .cart-footer {
+            border-top: 2px solid var(--gray-100);
+            padding-top: 1.5rem;
+            margin-top: auto;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 1.5rem;
+        }
+
+        .cart-total-amount {
+            color: var(--primary-dark);
+            font-size: 1.5rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: var(--primary-dark);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+            margin-bottom: 0.75rem;
+        }
+
+        .checkout-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .clear-cart {
+            width: 100%;
+            background: transparent;
+            color: #ef4444;
+            border: 1px solid #ef4444;
+            padding: 0.75rem;
+            border-radius: var(--radius-sm);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .clear-cart:hover {
+            background: #fef2f2;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+        }
+
+        /* Checkout Form Modal */
+        .checkout-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1002;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .checkout-modal.active {
+            display: flex;
+        }
+
+        .checkout-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            width: 100%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: scaleIn 0.3s ease;
+            box-shadow: var(--shadow-xl);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h2 {
+            color: var(--primary-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--gray-800);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e5e7eb;
+            border-radius: var(--radius-sm);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .btn-primary {
+            flex: 1;
+            background: var(--primary-dark);
+            color: var(--white);
+            border: none;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            flex: 1;
+            background: var(--gray-100);
+            color: var(--gray-800);
+            border: none;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128c7e;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 4rem 2rem 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary-light);
+            font-size: 1.25rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 1.8;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-light);
+        }
+
+        .footer-section i {
+            margin-right: 0.5rem;
+            width: 20px;
+            color: var(--primary-light);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-content {
+                max-width: 100%;
+            }
+
+            .checkout-form {
+                padding: 1.5rem;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--gray-800);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            box-shadow: var(--shadow-lg);
+            z-index: 1003;
+            opacity: 0;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast i {
+            color: var(--primary-light);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <div class="logo-icon">🌿</div>
+                <span>DJAMILA Industry</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#boutique">Boutique</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>DJAMILA Industry</h1>
+            <p class="subtitle">L'agriculture durable au service de votre santé</p>
+            <p>Des produits frais, naturels et locaux issus de la richesse agricole de la Casamance, Sénégal.</p>
+            <a href="#boutique" class="cta-button">
+                Voir la boutique <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="scroll-reveal">
+        <h2 class="section-title">Notre Entreprise</h2>
+        <p class="section-subtitle">Une passion pour l'agriculture durable</p>
+        
+        <div class="about">
+            <div class="about-image">
+                <i class="fas fa-seedling"></i>
+            </div>
+            <div class="about-content">
+                <h2>Excellence Agricole de Casamance</h2>
+                <p>DJAMILA Industry est une entreprise agricole innovante basée dans la région de Casamance, au Sénégal. Nous cultivons, élevons et produisons des denrées agricoles de première qualité dans le respect de l'environnement et des traditions locales.</p>
+                <p>Notre mission est de fournir des produits sains, frais et 100% naturels tout en soutenant le développement économique local et en préservant les ressources naturelles pour les générations futures.</p>
+                <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <span style="background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">
+                        <i class="fas fa-check-circle" style="margin-right: 0.25rem;"></i> 100% Bio
+                    </span>
+                    <span style="background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">
+                        <i class="fas fa-check-circle" style="margin-right: 0.25rem;"></i> Local
+                    </span>
+                    <span style="background: #dcfce7; color: #166534; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.875rem; font-weight: 600;">
+                        <i class="fas fa-check-circle" style="margin-right: 0.25rem;"></i> Durable
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="scroll-reveal">
+        <h2 class="section-title">Pourquoi nous choisir ?</h2>
+        <p class="section-subtitle">Des avantages qui font la différence</p>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-leaf"></i>
+                </div>
+                <h3>Agriculture Durable</h3>
+                <p>Pratiques agricoles respectueuses de l'environnement, sans pesticides nocifs, préservation des sols et de la biodiversité.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shipping-fast"></i>
+                </div>
+                <h3>Livraison Rapide</h3>
+                <p>Service de livraison efficace dans toute la région de Casamance avec respect de la chaîne du froid pour les produits frais.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-carrot"></i>
+                </div>
+                <h3>Produits Frais</h3>
+                <p>Récolte quotidienne et contrôle qualité rigoureux. De nos champs à votre table en moins de 24 heures.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>Service Client</h3>
+                <p>Équipe disponible et réactive pour vous accompagner. Votre satisfaction est notre priorité absolue.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="boutique" class="shop-section scroll-reveal">
+        <h2 class="section-title">Notre Boutique</h2>
+        <p class="section-subtitle">Produits frais et activités agricoles de qualité</p>
+        
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be inserted here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Floating Cart Button -->
+    <div class="cart-float" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart" style="font-size: 1.5rem;"></i>
+        <span class="cart-count" id="cartCount" style="display: none;">0</span>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal" onclick="closeCartOnOverlay(event)">
+        <div class="cart-content" onclick="event.stopPropagation()">
+            <div class="cart-header">
+                <h2><i class="fas fa-shopping-bag"></i> Votre Panier</h2>
+                <button class="close-cart" onclick="toggleCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be inserted here -->
+            </div>
+            
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="cart-total-amount" id="cartTotal">0 FCFA</span>
+                </div>
+                
+                <button class="checkout-btn" onclick="openCheckout()">
+                    <i class="fas fa-whatsapp"></i> Valider via WhatsApp
+                </button>
+                
+                <button class="clear-cart" onclick="clearCart()">
+                    <i class="fas fa-trash-alt"></i> Vider le panier
+                </button>
+                
+                <div class="security-badge">
+                    <i class="fas fa-lock"></i>
+                    <span>Paiement sécurisé à la livraison</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Form Modal -->
+    <div class="checkout-modal" id="checkoutModal" onclick="closeCheckoutOnOverlay(event)">
+        <div class="checkout-form" onclick="event.stopPropagation()">
+            <div class="form-header">
+                <h2>Finaliser la commande</h2>
+                <p style="color: #6b7280; font-size: 0.9rem;">Remplissez vos informations pour la livraison</p>
+            </div>
+            
+            <form id="orderForm" onsubmit="submitOrder(event)">
+                <div class="form-group">
+                    <label for="customerName">Nom complet *</label>
+                    <input type="text" id="customerName" required placeholder="Votre nom et prénom">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerPhone">Numéro de téléphone *</label>
+                    <input type="tel" id="customerPhone" required placeholder="Ex: 77 123 45 67" pattern="[0-9\s]{9,}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerAddress">Adresse de livraison *</label>
+                    <textarea id="customerAddress" required placeholder="Votre adresse complète (ville, quartier, point de repère...)"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="customerNotes">Notes supplémentaires (optionnel)</label>
+                    <textarea id="customerNotes" placeholder="Instructions particulières pour la livraison..."></textarea>
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeCheckout()">Retour</button>
+                    <button type="submit" class="btn-primary whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Envoyer la commande
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Produit ajouté au panier</span>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>DJAMILA Industry</h3>
+                <p>Votre partenaire de confiance pour des produits agricoles frais et durables en Casamance. Qualité, fraîcheur et respect de l'environnement.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/221761839071" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Casamance, Sénégal</p>
+                <p><i class="fas fa-phone"></i> +221 76 183 90 71</p>
+                <p><i class="fas fa-envelope"></i> contact@djamilaindustry.sn</p>
+                <p><i class="fas fa-clock"></i> Lun - Sam: 8h - 18h</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <p><a href="#accueil">Accueil</a></p>
+                <p><a href="#apropos">À propos</a></p>
+                <p><a href="#boutique">Boutique</a></p>
+                <p><a href="#" onclick="toggleCart()">Mon Panier</a></p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Informations</h3>
+                <p><i class="fas fa-shield-alt"></i> Paiement à la livraison</p>
+                <p><i class="fas fa-truck"></i> Livraison sous 24h</p>
+                <p><i class="fas fa-undo"></i> Satisfaction garantie</p>
+                <p><i class="fas fa-certificate"></i> Produits certifiés bio</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 DJAMILA Industry. Tous droits réservés. | Conçu avec <i class="fas fa-heart" style="color: #ef4444;"></i> en Casamance</p>
+        </div>
+    </footer>
+
+    <script>
+        // Data
+        const products = [
+            { id: 1, name: 'Concombre', price: 500, unit: 'kg', category: 'Légumes', icon: '🥒', type: 'product' },
+            { id: 2, name: 'Poivron', price: 800, unit: 'kg', category: 'Légumes', icon: '🫑', type: 'product' },
+            { id: 3, name: 'Gombo', price: 700, unit: 'kg', category: 'Légumes', icon: '🌿', type: 'product' },
+            { id: 4, name: 'Piment', price: 900, unit: 'kg', category: 'Condiments', icon: '🌶️', type: 'product' },
+            { id: 5, name: 'Aviculture', price: null, unit: 'service', category: 'Activités', icon: '🐔', type: 'activity', description: 'Élevage de volailles de qualité' },
+            { id: 6, name: 'Apiculture', price: null, unit: 'service', category: 'Activités', icon: '🍯', type: 'activity', description: 'Miel pur de Casamance' },
+            { id: 7, name: 'Pisciculture', price: null, unit: 'service', category: 'Activités', icon: '🐟', type: 'activity', description: 'Élevage de poissons frais' },
+            { id: 8, name: 'Élevage Local', price: null, unit: 'service', category: 'Activités', icon: '🐄', type: 'activity', description: 'Bétail et animaux de ferme' }
+        ];
+
+        // State
+        let cart = JSON.parse(localStorage.getItem('djamilaCart')) || [];
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProducts();
+            updateCartUI();
+            initScrollReveal();
+        });
+
+        // Render Products
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = products.map(product => `
+                <div class="product-card scroll-reveal">
+                    <div class="product-image">
+                        ${product.type === 'product' ? '<span class="product-badge">En stock</span>' : ''}
+                        <div style="font-size: 5rem;">${product.icon}</div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-origin">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent);"></i>
+                            Origine Casamance – Produit 100% naturel
+                        </div>
+                        ${product.type === 'activity' ? `<p style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">${product.description}</p>` : ''}
+                        <div class="product-footer">
+                            <div class="product-price">
+                                ${product.price ? `${product.price} <span>FCFA/${product.unit}</span>` : '<span style="font-size: 1rem;">Sur demande</span>'}
+                            </div>
+                            <button class="add-to-cart" onclick="addToCart(${product.id})" title="Ajouter au panier">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+            
+            // Re-init scroll reveal for new elements
+            setTimeout(initScrollReveal, 100);
+        }
+
+        // Cart Functions
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price || 0,
+                    icon: product.icon,
+                    quantity: 1
+                });
+            }
+            
+            saveCart();
+            updateCartUI();
+            showToast(`${product.name} ajouté au panier`);
+            
+            // Animate cart button
+            const cartBtn = document.querySelector('.cart-float');
+            cartBtn.style.transform = 'scale(1.2)';
+            setTimeout(() => cartBtn.style.transform = 'scale(1)', 200);
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            saveCart();
+            updateCartUI();
+        }
+
+        function updateQuantity(productId, change) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity += change;
+                if (item.quantity <= 0) {
+                    removeFromCart(productId);
+                } else {
+                    saveCart();
+                    updateCartUI();
+                }
+            }
+        }
+
+        function clearCart() {
+            if (confirm('Voulez-vous vraiment vider votre panier ?')) {
+                cart = [];
+                saveCart();
+                updateCartUI();
+                showToast('Panier vidé');
+            }
+        }
+
+        function saveCart() {
+            localStorage.setItem('djamilaCart', JSON.stringify(cart));
+        }
+
+        function updateCartUI() {
+            const cartCount = document.getElementById('cartCount');
+            const cartItems = document.getElementById('cartItems');
+            const cartFooter = document.getElementById('cartFooter');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            
+            // Update count badge
+            if (totalItems > 0) {
+                cartCount.textContent = totalItems;
+                cartCount.style.display = 'flex';
+            } else {
+                cartCount.style.display = 'none';
+            }
+            
+            // Update cart items
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>Votre panier est vide</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Ajoutez des produits pour commencer</p>
+                    </div>
+                `;
+                cartFooter.style.display = 'none';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">${item.icon}</div>
+                        <div class="cart-item-details">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-price">${item.price > 0 ? item.price + ' FCFA' : 'Sur demande'}</div>
+                            <div class="cart-item-controls">
+                                <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                                <span class="cart-item-qty">${item.quantity}</span>
+                                <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item" onclick="removeFromCart(${item.id})" title="Supprimer">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `).join('');
+                cartFooter.style.display = 'block';
+                cartTotal.textContent = totalPrice > 0 ? totalPrice.toLocaleString() + ' FCFA' : 'Sur devis';
+            }
+        }
+
+        // Modal Controls
+        function toggleCart() {
+            const modal = document.getElementById('cartModal');
+            modal.classList.toggle('active');
+            document.body.style.overflow = modal.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function closeCartOnOverlay(event) {
+            if (event.target === event.currentTarget) {
+                toggleCart();
+            }
+        }
+
+        function openCheckout() {
+            if (cart.length === 0) {
+                showToast('Votre panier est vide');
+                return;
+            }
+            // Check if cart has only activities (price = 0)
+            const hasProducts = cart.some(item => item.price > 0);
+            if (!hasProducts) {
+                showToast('Veuillez ajouter des produits avec prix');
+                return;
+            }
+            toggleCart();
+            document.getElementById('checkoutModal').classList.add('active');
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkoutModal').classList.remove('active');
+        }
+
+        function closeCheckoutOnOverlay(event) {
+            if (event.target === event.currentTarget) {
+                closeCheckout();
+            }
+        }
+
+        // Order Submission
+        function submitOrder(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('customerName').value;
+            const phone = document.getElementById('customerPhone').value;
+            const address = document.getElementById('customerAddress').value;
+            const notes = document.getElementById('customerNotes').value;
+            
+            // Build WhatsApp message
+            let message = `*Nouvelle Commande DJAMILA Industry*%0A%0A`;
+            message += `*Client:* ${name}%0A`;
+            message += `*Téléphone:* ${phone}%0A`;
+            message += `*Adresse:* ${address}%0A%0A`;
+            message += `*Commande:*%0A`;
+            
+            let total = 0;
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                message += `- ${item.icon} ${item.name} x${item.quantity}`;
+                if (item.price > 0) {
+                    message += ` = ${itemTotal} FCFA`;
+                }
+                message += `%0A`;
+            });
+            
+            if (total > 0) {
+                message += `%0A*Total: ${total.toLocaleString()} FCFA*`;
+            }
+            
+            if (notes) {
+                message += `%0A%0A*Notes:* ${notes}`;
+            }
+            
+            message += `%0A%0A_Paiement à la livraison_`;
+            
+            // Open WhatsApp
+            const whatsappUrl = `https://wa.me/221761839071?text=${message}`;
+            window.open(whatsappUrl, '_blank');
+            
+            // Clear cart and close modal
+            cart = [];
+            saveCart();
+            updateCartUI();
+            closeCheckout();
+            showToast('Commande envoyée avec succès !');
+            
+            // Reset form
+            document.getElementById('orderForm').reset();
+        }
+
+        // Toast Notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toastMessage');
+            toastMessage.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Scroll Reveal Animation
+        function initScrollReveal() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+            
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Mobile Menu Toggle (placeholder for future expansion)
+        function toggleMobileMenu() {
+            showToast('Menu mobile - Fonctionnalité en développement');
+        }
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
+            } else {
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            }
+        });
+    </script>
+</body>
+</html>
